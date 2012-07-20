@@ -9,6 +9,7 @@ require 'logger'
 dbconfig = YAML::load(File.open('db_connection.yml'))
 ActiveRecord::Base.establish_connection(dbconfig)
 ActiveRecord::Base.logger = Logger.new(STDERR)
+ActiveRecord::Base.logger = Logger.new(File.open('database.log', 'a'))
 
 class Location < ActiveRecord::Base
 
