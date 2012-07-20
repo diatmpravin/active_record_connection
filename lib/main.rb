@@ -4,9 +4,11 @@
 require 'rubygems'
 require 'active_record'
 require 'yaml'
+require 'logger'
 
 dbconfig = YAML::load(File.open('db_connection.yml'))
 ActiveRecord::Base.establish_connection(dbconfig)
+ActiveRecord::Base.logger = Logger.new(STDERR)
 
 class Location < ActiveRecord::Base
 
