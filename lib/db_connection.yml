@@ -1,7 +1,3 @@
-## YAML Template.
 
-adapter: 'mysql'
-database: 'test'
-username: 'root'
-password: ''
-host: 'localhost'
+  host: localhost
+  database: kl-new
